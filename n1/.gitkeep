@@ -1,12 +1,1 @@
-function palindrome(str) {
-  const alphaNum = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
 
-  for(let i = 0; i< alphaNum.length / 2; i++){
-    if (alphaNum[i] !== alphaNum[alphaNum.length - 1 - i]){
-      return false;
-    }
-  }
-  return true;
-}
-
-palindrome("eye");
