@@ -1,0 +1,21 @@
+function rot13(str) {
+  let alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  let resultado = "";
+  for(let i in str){
+    if(alfabeto.includes(str[i])){
+      let loc = alfabeto.indexOf(str[i])+13
+      if (loc >=26){
+        loc -= 26
+        resultado += alfabeto[loc];
+      }else {
+        resultado+=alfabeto[loc];
+      }
+
+    }else {
+      resultado += str[i];
+    }
+  }
+  return resultado;
+}
+
+rot13("SERR PBQR PNZC");
